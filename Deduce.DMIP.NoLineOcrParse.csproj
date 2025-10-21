@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net461</TargetFramework>
+		<BaseOutputPath></BaseOutputPath>
+		<OutputType>Exe</OutputType>
+	</PropertyGroup>
+
+	<ItemGroup>		
+		<PackageReference Include="Auto.Middlewares.Client" Version="1.0.3.4" />
+		<PackageReference Include="DMP.Common.Configuration" Version="1.34.0.3" />
+		<PackageReference Include="DMP.Common.CrystalQuartz" Version="1.34.0.3" />
+		<PackageReference Include="DMP.Common.HttpApis" Version="1.34.0.3" />
+		<PackageReference Include="DMP.Common.Logging" Version="1.34.0.3" />
+		<PackageReference Include="SkyApm.Agent.Owin" Version="1.33.25.3" />
+		<PackageReference Include="SkyApm.Tracing.Http" Version="1.33.25.3" />
+		<PackageReference Include="SkyApm.Tracing.Quartz" Version="1.33.25.3" />
+		<PackageReference Include="SkyApm.Tracing.RabbitMQ" Version="1.33.25.3" />
+		<PackageReference Include="System.Resources.Extensions" Version="9.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\module\Deduce.DMIP.ResourceManage\Deduce.DMIP.ResourceManage.csproj" />
+	</ItemGroup>
+
+</Project>

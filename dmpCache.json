@@ -1,0 +1,54 @@
+{
+  "$schema": "http://cachemanager.michaco.net/schemas/cachemanager.json#",
+  "cacheManagers": [
+    {
+      "name": "Common_101",
+      "maxRetries": 10,
+      "retryTimeout": 100,
+      "updateMode": "None",
+      "loggerFactory": {
+        "knownType": "Microsoft"
+      },
+      "serializer": {
+        "knownType": "Json"
+      },
+      "handles": [
+        {
+          "name": "Common 101 redis cache",
+          "type": "DMP.Common.Caching.NakedRedisCacheHandle`1, DMP.Common.Caching",
+          "region": "DMP:Auto",
+          "key": "redis-dmp",
+          "expirationMode": "Sliding",
+          "expirationTimeout": "365.0:0:0",
+          "isBackplaneSource": false,
+          "enableStatistics": true
+        }
+      ]
+    },
+    {
+      "name": "AutoTask",
+      "maxRetries": 10,
+      "retryTimeout": 100,
+      "updateMode": "None",
+      "loggerFactory": {
+        "knownType": "Microsoft"
+      },
+      "serializer": {
+        "knownType": "Json"
+      },
+      "handles": [
+        {
+          "name": "Common 101 AutoTask redis cache",
+          "type": "DMP.Common.Caching.NakedRedisCacheHandle`1, DMP.Common.Caching",
+          "region": "DMP:Auto:Task",
+          "key": "redis-dmp",
+          "expirationMode": "Sliding",
+          "expirationTimeout": "365.0:0:0",
+          "isBackplaneSource": false,
+          "enableStatistics": true
+        }
+      ]
+    }
+
+  ]
+}
